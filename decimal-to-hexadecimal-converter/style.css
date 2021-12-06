@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    width: 60%;
+    min-height: 19rem;
+    margin:auto;
+    margin-top:7rem;
+    text-align: center;
+    padding: 3rem
+}
+
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    padding: 0.5rem;
+}
+h1.title{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+input{
+    padding: 0.5rem;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    font-size: 1.25rem;
+}
+
+.resultArea{
+    background-color: #f1f1f1;
+}
+
+.resultArea h1{
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+button{
+    padding: 0.75rem 2.5rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #2AC4BC;
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    border: 1px solid #2AC4BC;
+    margin-top: 1.25rem;
+    cursor: pointer;
+}
+
+button#convertBtn{
+    margin-right: 1.25rem;
+}
