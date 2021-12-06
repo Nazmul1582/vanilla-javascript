@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Option</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="title">
+                <h1>Select Your Location</h1>
+            </div>
+            <div class="country">
+                <select id="selectCou"  class="box " >
+                    <option selected value="">Select Your Country</option>
+                    <option  value="Bangladesh">Bangladesh</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                </select>
+            </div>
+    
+            <span id="divState" style="display:none;margin-left:40px;font-size:25px;">Select Division/State</span>
+    
+        <!-- Division of Bangladesh -->        
+            <div class="division1" style="display:none">
+                <select id="bdDiv"  class="box" >
+                    <option selected value="">Select your division</option>
+                    <option value="dk">Dhaka</option>
+                    <option value="ctg">Chittagong</option>
+                    <option value="raj">Rajshahi</option>
+                </select>
+            </div>
+    
+        <!-- states of Pakistan -->
+            <div class="division2" style="display:none">
+                <select id="pakDiv"  class="box" >
+                    <option selected value="">Select your state</option>
+                    <option value="Isl">Punjab</option>
+                    <option value="kor">Sindh</option>
+                    <option value="lah">Balochistan</option>
+                </select>
+            </div>
+    
+                    
+        <!--  states of India-->
+            <div class="states" style="display:none">
+                <select id="inStates"  class="box">
+                    <option selected value="">Select your State</option>
+                    <option value="kol">West Bengal</option>
+                    <option value="de">Karnataka</option>
+                    <option value="che">Goa</option>
+                </select>
+            </div>
+    
+        <span id="dist" style="display:none;font-size:25px;margin-left:40px;">Select District</span>
+
+                    <!-- Districts of Dhaka -->
+            <div class="dkDist" style="display:none">
+                <select class="box" id="selectDkDist">
+                    <option selected value="">Districts of Dhaka division</option>
+                    <option value="ker">Keranigonj</option>
+                    <option value="mun">Munsigonj</option>
+                    <option value="nar">Narayangonj</option>
+                </select>
+            </div>
+                    <!-- Districts of Chittagong-->
+            <div class="ctgDist" style="display:none">
+                    <select class="box" id="selectCtgDist">
+                        <option selected value="">Districts of Chittagong division </option>
+                        <option value="cu">Cumilla</option>
+                        <option value="cox">Coxs-Bazar</option>
+                        <option value="rang">Rangamati</option>
+                    </select>
+            </div>
+                    <!-- Districts of Rajshahi-->
+            <div class="rajDist" style="display:none">
+                <select class="box" id="selectRajDist">
+                    <option selected value="">Districts of Rajshahi division</option>
+                    <option value="sr">Bogura</option>
+                    <option value="la">Natore</option>
+                    <option value="ki">Pabna</option>
+                </select>
+            </div>
+
+                    <!-- Districts of Punjab,Pakistan -->
+            <div class="IslDist" style="display:none">
+                <select class="box" id="selectDkDist">
+                    <option selected value="">Districts of Punjab</option>
+                    <option value="ker">Gujrat</option>
+                    <option value="mun">Hafizabad</option>
+                    <option value="nar">Jhang</option>
+                </select>
+            </div>
+                    <!-- Districts of Sindh,Pakistan -->
+            <div class="korDist" style="display:none">
+                    <select class="box" id="selectCtgDist">
+                        <option selected value="">Districts of Sindh</option>
+                        <option value="cu">Karachi</option>
+                        <option value="cox">Hyderabad</option>
+                        <option value="rang">Sukkur</option>
+                    </select>
+            </div>
+                    <!-- Districts of Balochistan,Pakistan -->
+            <div class="lahDist" style="display:none">
+                <select class="box" id="selectRajDist">
+                    <option selected value="">Districts of Balochistan</option>
+                    <option value="sr">Barkhan</option>
+                    <option value="la">Kachhi</option>
+                    <option value="ki">Jafarabad</option>
+                </select>
+            </div>
+
+                    <!-- Districts of West Bengal, India -->
+            <div class="kolDist" style="display:none">
+                <select class="box" id="selectDkDist">
+                    <option selected value="">Districts of West Bengal</option>
+                    <option value="ker">Kolkata</option>
+                    <option value="mun">Hooghly</option>
+                    <option value="nar">Cooch Behar</option>
+                </select>
+            </div>
+                    <!-- Districts of Karnataka,India -->
+            <div class="deDist" style="display:none">
+                    <select class="box" id="selectCtgDist">
+                        <option selected value="">Districts of Karnataka</option>
+                        <option value="cu">Banglore</option>
+                        <option value="cox">	Tumakuru</option>
+                        <option value="rang">Mandya</option>
+                    </select>
+            </div>
+                    <!-- Districts of India -->
+            <div class="cheDist" style="display:none">
+                <select class="box" id="selectRajDist">
+                    <option selected value="">Districts of Goa</option>
+                    <option value="sr">Panaji</option>
+                    <option value="la">North Goa</option>
+                    <option value="ki">South Goa</option>
+                </select>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="./main.js"></script>
+    
+</body>
+</html>
