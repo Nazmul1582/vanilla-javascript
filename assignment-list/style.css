@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    color: #ffff;
+    background: rgb(142, 73, 232);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+}
+.input-area, .output-area{
+    background: #fff;
+    min-width: 35rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.output-area{
+    margin-top: 2rem;
+}
+.input-area .title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+.input-area .form-group{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group input{
+  width: 85%;
+  outline: none;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  transition: all 0.3s ease;
+}
+.form-group input:focus{
+  border-color: #18c8d4;
+}
+.submitBtn button{
+    padding: 0.35rem 1.5rem;
+    border: 1px solid #2ba6c2;
+    border-radius: 0.25rem;
+    margin: auto;
+    display: block;
+    background-color: #2ba6c5;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    min-height: 5rem;
+}
+.table thead{
+    background-color: #f1f1f1;
+}
+.table tr:nth-child(even){
+    background-color: #f1f1f1;
+}
+
+.table th, td{
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+}
