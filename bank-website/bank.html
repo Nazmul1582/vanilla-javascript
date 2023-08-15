@@ -3,7 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bank Inside</title>
+    <title>Bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2 class="text-center font-semibold text-5xl py-10">
+        Let's get some
+        <span class="font-bold text-violet-600">Mooooooney</span>!!!
+      </h2>
+    </header>
+    <main>
+      <section class="w-3/4 mx-auto my-12">
+        <div class="grid grid-cols-3 gap-5">
+          <div
+            class="bg-teal-500 p-10 rounded-lg text-white shadow-xl shadow-teal-200"
+          >
+            <h3 class="text-3xl font-semibold mb-3">Deposit</h3>
+            <h2 class="text-5xl font-semibold">
+              $ <span id="deposit">00</span>
+            </h2>
+          </div>
+          <div
+            class="bg-pink-400 p-10 rounded-lg text-white shadow-xl shadow-pink-200"
+          >
+            <h3 class="text-3xl font-semibold mb-3">Withdraw</h3>
+            <h2 class="text-5xl font-semibold">
+              $ <span id="withdraw">00</span>
+            </h2>
+          </div>
+          <div
+            class="bg-rose-400 p-10 rounded-lg text-white shadow-xl shadow-rose-200"
+          >
+            <h3 class="text-3xl font-semibold mb-3">Balance</h3>
+            <h2 class="text-5xl font-semibold">
+              $ <span id="balance">1240</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+      <!-- deposit and withdraw -->
+      <section class="w-3/4 mx-auto mb-12">
+        <div class="grid grid-cols-2 gap-5">
+          <div
+            class="bg-blue-400 p-10 rounded-lg text-white shadow-xl shadow-blue-200"
+          >
+            <h3 class="text-3xl font-semibold mb-3">Please Deposit</h3>
+            <input
+              type="number"
+              id="depositInput"
+              class="p-2 rounded-md w-full mb-4 text-black outline-0 font-semibold"
+              placeholder=" $ amount you want to deposit"
+            />
+            <button
+              id="depositBtn"
+              class="block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold"
+            >
+              Deposit
+            </button>
+          </div>
+          <div
+            class="bg-violet-400 p-10 rounded-lg text-white shadow-xl shadow-violet-300"
+          >
+            <h3 class="text-3xl font-semibold mb-3">Please Withdraw</h3>
+            <input
+              type="number"
+              id="withdrawInput"
+              class="p-2 rounded-md w-full mb-4 text-black outline-0 font-semibold"
+              placeholder=" $ amount you want to withdraw"
+            />
+            <button
+              id="withdrawBtn"
+              class="block bg-violet-600 hover:bg-violet-700 px-5 py-2 rounded-lg font-semibold"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
