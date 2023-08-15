@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Website with JS DOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-center text-5xl font-semibold py-10">
+        Welcome to my your
+        <span class="font-bold text-violet-600">Baap-er-Bank</span>!!!
+      </h2>
+    </header>
+    <main>
+      <section class="text-center">
+        <h3 class="text-2xl font-semibold mb-3">Please log in</h3>
+        <form class="bg-blue-100 w-3/4 p-10 mx-auto gap-3 rounded-lg">
+          <input
+            id="email"
+            class="w-1/2 p-2 outline-0 rounded-lg mb-3"
+            type="email"
+            placeholder="Type your email address"
+          />
+          <input
+            id="password"
+            class="w-1/2 p-2 outline-0 rounded-lg mb-3"
+            type="password"
+            placeholder="Type your password"
+          />
+          <div>
+            <button
+              id="btn-submit"
+              class="bg-blue-500 hover:bg-blue-600 px-5 py-2 font-semibold rounded-lg text-white"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
