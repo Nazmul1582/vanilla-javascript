@@ -4,9 +4,13 @@ const withdrawBtn = document.getElementById("withdrawBtn");
 // withdraw function
 withdrawBtn.addEventListener("click", function () {
   // get new withdraw amount
-  const newWithdrawAmount = getInputFieldValueById("withdrawInput");
+  const newWithdraw = getInputFieldValueById("withdrawInput");
 
   // get previous withdraw amount
   const previousWithdraw = getTextElementValueById("withdraw");
-  console.log(previousWithdraw);
+
+  const totalWithdraw = newWithdraw + previousWithdraw;
+
+  // updated total withdraw
+  addAmount("withdraw", totalWithdraw);
 });

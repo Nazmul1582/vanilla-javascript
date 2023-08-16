@@ -4,9 +4,13 @@ const depositBtn = document.getElementById("depositBtn");
 // deposit function
 depositBtn.addEventListener("click", function () {
   // get new deposit amount
-  const newDepositAmount = getInputFieldValueById("depositInput");
+  const newDeposit = getInputFieldValueById("depositInput");
 
   // get previous deposit amount
   const previousDeposit = getTextElementValueById("deposit");
-  console.log(previousDeposit);
+
+  const totalDeposit = previousDeposit + newDeposit;
+
+  // updated deposit amount
+  addAmount("deposit", totalDeposit);
 });
