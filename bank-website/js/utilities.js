@@ -4,3 +4,10 @@ function getInputFieldValueById(inputFieldId) {
   const newAmount = parseFloat(inputFieldValue);
   return newAmount;
 }
+
+function getTextElementValueById(textElementId) {
+  const textElement = document.getElementById(textElementId);
+  const textElementValue = textElement.innerText;
+  const previousAmount = parseFloat(textElementValue);
+  return previousAmount;
+}
