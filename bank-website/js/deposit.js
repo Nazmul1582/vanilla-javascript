@@ -13,4 +13,9 @@ depositBtn.addEventListener("click", function () {
 
   // updated deposit amount
   addAmount("deposit", totalDeposit);
+
+  // updated total balance
+  const previousBalance = getTextElementValueById("balance");
+  const totalBalance = previousBalance + newDeposit;
+  addAmount("balance", totalBalance);
 });
