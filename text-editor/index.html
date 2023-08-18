@@ -12,8 +12,75 @@
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>My Text Editor</h1>
+  <body class="container mx-auto">
+    <main class="flex flex-col justify-center items-center min-h-screen">
+      <section class="bg-blue-300 w-3/4 p-5 rounded-md">
+        <h1 class="text-3xl font-semibold text-center mb-5">My Text Editor</h1>
+        <div
+          class="border border-black py-3 px-5 rounded bg-blue-200 mx-24 mb-8"
+        >
+          <div
+            class="p-2 flex justify-around gap-1 border-b-[3px] border-black mb-5"
+          >
+            <div>
+              <button id="bold" class="hover:bg-blue-500 px-3 py-1 rounded">
+                <i class="fa-solid fa-bold"></i>
+              </button>
+              <button id="italic" class="hover:bg-blue-500 px-3 py-1 rounded">
+                <i class="fa-solid fa-italic"></i>
+              </button>
+              <button
+                id="underline"
+                class="hover:bg-blue-500 px-3 py-1 rounded"
+              >
+                <i class="fa-solid fa-underline"></i>
+              </button>
+            </div>
+            <div>
+              <button
+                id="align-left"
+                class="hover:bg-blue-500 px-3 py-1 rounded"
+              >
+                <i class="fa-solid fa-align-left"></i>
+              </button>
+              <button
+                id="align-center"
+                class="hover:bg-blue-500 px-3 py-1 rounded"
+              >
+                <i class="fa-solid fa-align-center"></i>
+              </button>
+              <button
+                id="align-right"
+                class="hover:bg-blue-500 px-3 py-1 rounded"
+              >
+                <i class="fa-solid fa-align-right"></i>
+              </button>
+              <button
+                id="align-justify"
+                class="hover:bg-blue-500 px-3 py-1 rounded"
+              >
+                <i class="fa-solid fa-align-justify"></i>
+              </button>
+            </div>
+            <div class="flex items-center gap-3">
+              <input
+                id="font-size"
+                type="number"
+                class="w-10 outline-0 text-center font-semibold"
+                value="16"
+              />
+              <input id="colorField" type="color" id="" />
+            </div>
+          </div>
+          <div>
+            <textarea
+              id="text-area"
+              class="w-full min-h-[300px] py-1 px-2 outline-0"
+            ></textarea>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="js/editor.js"></script>
   </body>
 </html>
