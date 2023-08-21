@@ -12,7 +12,7 @@ function changeStyle(targetedElement, styledClass) {
 }
 
 // Resusable function for changing text alignment
-function changeAlignment(targetedElement, alignment) {
+function changeAlignment(targetedElement, alignment, ...othersElements) {
   if (targetedElement.className.includes("focused")) {
     targetedElement.classList.remove("focused");
     textField.style.removeProperty("text-align");
@@ -20,4 +20,9 @@ function changeAlignment(targetedElement, alignment) {
   }
   targetedElement.classList.add("focused");
   textField.style.textAlign = alignment;
+  for (ele of othersElements) {
+    if (ele.className.includes("focused")) {
+      ele.classList.remove("focused");
+    }
+  }
 }

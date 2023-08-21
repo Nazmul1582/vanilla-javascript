@@ -4,17 +4,17 @@ const alignRight = document.getElementById("align-right");
 const alignJustify = document.getElementById("align-justify");
 
 alignLeft.addEventListener("click", function () {
-  changeAlignment(alignLeft, "left");
+  changeAlignment(alignLeft, "left", alignCenter, alignRight, alignJustify);
 });
 
 alignCenter.addEventListener("click", function () {
-  changeAlignment(alignCenter, "center");
+  changeAlignment(alignCenter, "center", alignLeft, alignRight, alignJustify);
 });
 
 alignRight.addEventListener("click", function () {
-  changeAlignment(alignRight, "right");
+  changeAlignment(alignRight, "right", alignLeft, alignCenter, alignJustify);
 });
 
 alignJustify.addEventListener("click", function () {
-  changeAlignment(alignJustify, "justify");
+  changeAlignment(alignJustify, "justify", alignLeft, alignCenter, alignRight);
 });
