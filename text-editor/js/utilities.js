@@ -10,3 +10,14 @@ function changeStyle(targetedElement, styledClass) {
     targetedElement.classList.add("focused");
   }
 }
+
+// Resusable function for changing text alignment
+function changeAlignment(targetedElement, alignment) {
+  if (targetedElement.className.includes("focused")) {
+    targetedElement.classList.remove("focused");
+    textField.style.removeProperty("text-align");
+    return;
+  }
+  targetedElement.classList.add("focused");
+  textField.style.textAlign = alignment;
+}
