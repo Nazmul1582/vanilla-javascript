@@ -20,9 +20,14 @@ function changeAlignment(targetedElement, alignment, ...othersElements) {
   }
   targetedElement.classList.add("focused");
   textField.style.textAlign = alignment;
-  for (ele of othersElements) {
-    if (ele.className.includes("focused")) {
-      ele.classList.remove("focused");
-    }
-  }
+  // for (ele of othersElements) {
+  //   if (ele.className.includes("focused")) {
+  //     ele.classList.remove("focused");
+  //   }
+  // }
+
+  // another way: using forEach() array method
+  othersElements.forEach((ele) => {
+    ele.className.includes("focused") && ele.classList.remove("focused");
+  });
 }
