@@ -7,6 +7,11 @@
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome icon -->
+    <script
+      src="https://kit.fontawesome.com/7cf27c7fe5.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,14 +133,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center pt-12">
+                <div class="flex justify-center py-12">
                     <button class="btn text-white capitalize bg-[#0D6EFD] hover:bg-[#0d5efd]">Show All</button>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="bg-[#0D6EFD0D] py-28">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-3">Hot Gadgets</h2>
+                    <p>You can definitely work.</p>
+                </div>
+                <div class="flex justify-end items-center gap-5">
+                    <div class="flex gap-4 justify-center">
+                        <span class="text-xl bg-white w-10 h-10 rounded-full grid place-items-center cursor-pointer shadow-sm">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="text-xl bg-white w-10 h-10 rounded-full grid place-items-center cursor-pointer shadow-sm">
+                          <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="text-xl bg-white w-10 h-10 rounded-full grid place-items-center cursor-pointer shadow-sm">
+                          <i class="fa-brands fa-instagram"></i>
+                        </span>
+                      </div>
+                    <button class="btn text-white capitalize bg-[#0D6EFD] hover:bg-[#0d5efd]">Join Premium</button>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <script src="./js/script.js"></script>
