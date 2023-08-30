@@ -1,3 +1,7 @@
+const inputField = document.getElementById("inputField");
+const searchBtn = document.getElementById("searchBtn");
+const showAllBtn = document.getElementById("showAllBtn");
+
 const loadPhones = async (phoneName) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${phoneName}`);
     const data = await res.json();
@@ -7,7 +11,16 @@ const loadPhones = async (phoneName) => {
 
 const displayPhones = (phones) => {
     const phoneContainer = document.getElementById('phone-container');
-    phoneContainer.textContent = ""
+    phoneContainer.textContent = "";
+    if(phones.length > 9){
+        showAllBtn.parentNode.style.display= "flex"
+    }else if(phones.length === 0){
+        showAllBtn.parentNode.style.display = "none"
+        alert("Not Found!")
+    }else{
+        showAllBtn.parentNode.style.display= "none"
+    }
+    phones = phones.slice(0, 9);    
     phones.forEach(phone => {
         const div = document.createElement("div");
         div.innerHTML = `
@@ -23,19 +36,16 @@ const displayPhones = (phones) => {
             </div>
         </div>
         `
-        phoneContainer.appendChild(div)
+        phoneContainer.appendChild(div);
     })
 }
 
-// handle search button
-const inputField = document.getElementById("inputField");
-const searchBtn = document.getElementById("searchBtn");
-
+// handle search
 searchBtn.addEventListener('click', (e) => handleSearch(e));
 
 const handleSearch = (e) => {
     e.preventDefault();
     const phoneName = inputField.value;
     loadPhones(phoneName)
-    inputField.value = ""
+    inputField.value = "";
 }
