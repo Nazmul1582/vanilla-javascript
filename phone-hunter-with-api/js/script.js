@@ -79,6 +79,10 @@ const handleShowDetails = async(id) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
     const phoneDetails = data.data;
-    
+    displayPhoneDetails(phoneDetails);
+}
+
+const displayPhoneDetails = (phoneDetails) => {
     console.log(phoneDetails)
+    show_phone_details.showModal();
 }
