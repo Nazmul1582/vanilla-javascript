@@ -99,6 +99,6 @@ const displayPhoneDetails = (phone) => {
     <p>slug: ${phone.slug}</p>
     <p>Release date: ${phone?.releaseDate}</p>
     <p>Brand: ${phone.brand}</p>
-    <p>GPS: ${phone?.others?.GPS}</p>
+    <p>GPS: ${phone?.others?.GPS || "No data found!"}</p>
     `
 }
