@@ -37,7 +37,7 @@ const displayPhones = (phones, isShowAll) => {
                 <p>There are many variations of passages of available, but the majority have suffered</p>
                 <span class="font-bold text-2xl mb-2">$999</span>
                 <div class="card-actions justify-center">
-                <button class="btn text-white capitalize bg-[#0D6EFD] hover:bg-[#0d5efd]">Show Details</button>
+                <button onclick="handleShowDetails('${phone.slug}')" class="btn text-white capitalize bg-[#0D6EFD] hover:bg-[#0d5efd]">Show Details</button>
                 </div>
             </div>
         </div>
@@ -72,4 +72,13 @@ const toggleLoadingSpinner = (isLoading) => {
 showAllBtn.addEventListener("click", () => showAllPhones());
 const showAllPhones = () => {
     handleSearch(true);
+}
+
+// handle show details
+const handleShowDetails = async(id) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    const phoneDetails = data.data;
+    
+    console.log(phoneDetails)
 }
