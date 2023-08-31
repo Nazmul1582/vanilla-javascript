@@ -3,18 +3,18 @@ const searchBtn = document.getElementById("searchBtn");
 const showAllBtn = document.getElementById("showAllBtn");
 const loadingSpinner = document.getElementById("loading-spinner");
 
-const loadPhones = async (phoneName) => {
+const loadPhones = async (phoneName, isShowAll) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${phoneName}`);
     const data = await res.json();
     const phones = data.data;
-    displayPhones(phones)
+    displayPhones(phones, isShowAll)
 }
 
-const displayPhones = (phones) => {
+const displayPhones = (phones, isShowAll) => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = "";
 
-    if(phones.length > 9){
+    if(phones.length > 9 && !isShowAll){
         showAllBtn.parentNode.style.display= "flex"
     }else if(phones.length === 0){
         showAllBtn.parentNode.style.display = "none"
@@ -23,7 +23,9 @@ const displayPhones = (phones) => {
         showAllBtn.parentNode.style.display= "none"
     }
 
-    phones = phones.slice(0, 9);
+    if(!isShowAll){
+        phones = phones.slice(0, 9);
+    }
 
     phones.forEach(phone => {
         const div = document.createElement("div");
@@ -47,15 +49,14 @@ const displayPhones = (phones) => {
 }
 
 // handle search
-searchBtn.addEventListener('click', (e) => handleSearch(e));
+searchBtn.addEventListener('click', () => handleSearch());
 
-const handleSearch = (e) => {
-    e.preventDefault();
+const handleSearch = (isShowAll) => {
     // show loading spinner
     toggleLoadingSpinner(true);
     const phoneName = inputField.value;
-    loadPhones(phoneName)
-    inputField.value = "";
+    loadPhones(phoneName, isShowAll)
+    // inputField.value = "";
 }
 
 // loading spinner
@@ -65,4 +66,10 @@ const toggleLoadingSpinner = (isLoading) => {
     }else{
         loadingSpinner.classList.add('hidden')
     }
+}
+
+// show all phones
+showAllBtn.addEventListener("click", () => showAllPhones());
+const showAllPhones = () => {
+    handleSearch(true);
 }
