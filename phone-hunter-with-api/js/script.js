@@ -1,6 +1,7 @@
 const inputField = document.getElementById("inputField");
 const searchBtn = document.getElementById("searchBtn");
 const showAllBtn = document.getElementById("showAllBtn");
+const loadingSpinner = document.getElementById("loading-spinner");
 
 const loadPhones = async (phoneName) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${phoneName}`);
@@ -12,6 +13,7 @@ const loadPhones = async (phoneName) => {
 const displayPhones = (phones) => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = "";
+
     if(phones.length > 9){
         showAllBtn.parentNode.style.display= "flex"
     }else if(phones.length === 0){
@@ -20,7 +22,9 @@ const displayPhones = (phones) => {
     }else{
         showAllBtn.parentNode.style.display= "none"
     }
-    phones = phones.slice(0, 9);    
+
+    phones = phones.slice(0, 9);
+
     phones.forEach(phone => {
         const div = document.createElement("div");
         div.innerHTML = `
@@ -38,6 +42,8 @@ const displayPhones = (phones) => {
         `
         phoneContainer.appendChild(div);
     })
+    // hide loading spinner
+    toggleLoadingSpinner(false);
 }
 
 // handle search
@@ -45,7 +51,18 @@ searchBtn.addEventListener('click', (e) => handleSearch(e));
 
 const handleSearch = (e) => {
     e.preventDefault();
+    // show loading spinner
+    toggleLoadingSpinner(true);
     const phoneName = inputField.value;
     loadPhones(phoneName)
     inputField.value = "";
+}
+
+// loading spinner
+const toggleLoadingSpinner = (isLoading) => {
+    if(isLoading){
+        loadingSpinner.classList.remove("hidden")
+    }else{
+        loadingSpinner.classList.add('hidden')
+    }
 }
