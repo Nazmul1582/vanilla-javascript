@@ -78,11 +78,27 @@ const showAllPhones = () => {
 const handleShowDetails = async(id) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
-    const phoneDetails = data.data;
-    displayPhoneDetails(phoneDetails);
+    const phone = data.data;
+    displayPhoneDetails(phone);
 }
 
-const displayPhoneDetails = (phoneDetails) => {
-    console.log(phoneDetails)
+const displayPhoneDetails = (phone) => {
     show_phone_details.showModal();
+    console.log(phone)
+    const divContainer = document.getElementById("phone-info");
+    divContainer.innerHTML = `
+    <div>
+        <img src="${phone.image}" />
+    </div>
+    <h3>${phone.name}</h3>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    <p>Storage: ${phone?.mainFeatures?.storage}</p>
+    <p>Display Size: ${phone?.mainFeatures?.displaySize}</p>
+    <p>Chipset: ${phone?.mainFeatures?.chipset}</p>
+    <p>Memory: ${phone?.mainFeatures?.memory}</p>
+    <p>slug: ${phone.slug}</p>
+    <p>Release date: ${phone?.releaseDate}</p>
+    <p>Brand: ${phone.brand}</p>
+    <p>GPS: ${phone?.others?.GPS}</p>
+    `
 }
