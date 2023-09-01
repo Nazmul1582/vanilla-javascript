@@ -84,21 +84,20 @@ const handleShowDetails = async(id) => {
 
 const displayPhoneDetails = (phone) => {
     show_phone_details.showModal();
-    console.log(phone)
     const divContainer = document.getElementById("phone-info");
     divContainer.innerHTML = `
-    <div>
+    <div class="bg-[#0D6EFD0D] p-10 flex justify-center">
         <img src="${phone.image}" />
     </div>
-    <h3>${phone.name}</h3>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-    <p>Storage: ${phone?.mainFeatures?.storage}</p>
-    <p>Display Size: ${phone?.mainFeatures?.displaySize}</p>
-    <p>Chipset: ${phone?.mainFeatures?.chipset}</p>
-    <p>Memory: ${phone?.mainFeatures?.memory}</p>
-    <p>slug: ${phone.slug}</p>
-    <p>Release date: ${phone?.releaseDate}</p>
-    <p>Brand: ${phone.brand}</p>
-    <p>GPS: ${phone?.others?.GPS || "No data found!"}</p>
+    <h3 class = "text-xl font-semibold my-3">${phone.name}</h3>
+    <p class="text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    <p class="my-2"><span class="font-semibold">Storage:</span> ${phone?.mainFeatures?.storage}</p>
+    <p class="mb-2"><span class="font-semibold">Display Size: </span>${phone?.mainFeatures?.displaySize}</p>
+    <p class="mb-2"><span class="font-semibold">Chipset: </span>${phone?.mainFeatures?.chipSet}</p>
+    <p class="mb-2"><span class="font-semibold">Memory: </span>${phone?.mainFeatures?.memory}</p>
+    <p class="mb-2"><span class="font-semibold">slug: </span>${phone.slug}</p>
+    <p class="mb-2"><span class="font-semibold">Release date: </span>${phone?.releaseDate || "No data found!"} </p>
+    <p class="mb-2"><span class="font-semibold">Brand: </span>${phone.brand}</p>
+    <p class="mb-2"><span class="font-semibold">GPS: </span>${phone?.others?.GPS || "No data found!"}</p>
     `
 }
